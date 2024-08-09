@@ -85,7 +85,7 @@ int main() {
     // Solve the PDE using the finite difference method
     solve_pde(u, N, STEPS, DX, DT);
 
-    // Output the final solution (consider saving to a file for large data sets)
+    // Output the final solution (save to file)
     for (int i = 0; i < N; i++) {
         printf("u(%f, T_MAX) = %f\n", i * DX, u[i]);
     }
