@@ -52,7 +52,6 @@ void solve_pde(double *u, int n, int steps, double dx, double dt) {
         double *temp = u;
         u = u_next;
         u_next = temp;
-    }
 
         // Debug: Print out intermediate results
         if (t % (steps / 10) == 0) {
