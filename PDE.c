@@ -5,9 +5,9 @@
 
 // Constants definition for problem parameters
 #define N 1000  // Number of spatial points
-#define T_MAX 1.0  // Maximum time
+#define T_MAX 0.1  // Maximum time. Reduced from 1.0 to 0.1 for easier debug.
 #define DX (1.0 / (N - 1))  // Spatial step size
-#define DT 0.0001  // Time step size
+#define DT 0.000001  // Time step size. Reduced from 0.0001, CFL condition.
 #define STEPS (int)(T_MAX / DT)  // Number of time steps
 
 /**
@@ -52,6 +52,12 @@ void solve_pde(double *u, int n, int steps, double dx, double dt) {
         double *temp = u;
         u = u_next;
         u_next = temp;
+    }
+
+        // Debug: Print out intermediate results
+        if (t % (steps / 10) == 0) {
+            printf("Time step %d: u[1] = %f, u[N-2] = %f\n", t, u[1], u[n-2]);
+        }
     }
 
     // Copy the result back to the original array
