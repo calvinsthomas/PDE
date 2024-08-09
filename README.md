@@ -1,5 +1,5 @@
 # PDE
-PDE - Boundary - .c
+PDE Practice - Boundary - .c
 
 Latex Final Formulas:
 
