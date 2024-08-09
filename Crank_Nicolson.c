@@ -5,7 +5,7 @@
 #define N 1000
 #define T_MAX 0.1
 #define DX (1.0 / (N - 1))
-#define DT 0.00001  // Adjust as needed; Crank-Nicolson is unconditionally stable.
+#define DT 0.00001  // Crank-Nicolson unconditionally stable, no CFL.
 #define STEPS (int)(T_MAX / DT)
 
 void solve_pde(double *u, int n, int steps, double dx, double dt) {
