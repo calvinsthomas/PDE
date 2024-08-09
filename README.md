@@ -12,7 +12,7 @@ u_i^{n+1} = u_i^n + \Delta t \left( \frac{u_{i+1}^n - 2u_i^n + u_{i-1}^n}{\Delta
 3. Forward-Time Centered-Space (FTCS) Scheme for Linear Diffusion:
 u_i^{n+1} = u_i^n + \Delta t \cdot \frac{u_{i+1}^n - 2u_i^n + u_{i-1}^n}{\Delta x^2}
 
-TriDiagonal System - Thomas Algo
+  TriDiagonal System - Thomas Algo
 
 4. Forward Elimination:
 Modified coefficients
